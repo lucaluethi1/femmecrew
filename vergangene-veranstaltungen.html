@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vergangene Veranstaltungen — FEMME CREW</title>
+  <meta name="description" content="Schau dir an, was wir gemeinsam erlebt haben — vergangene FEMME CREW Events." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .event-series {
+      margin-bottom: 4rem;
+    }
+    .event-series-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid var(--lilac);
+    }
+    .event-series-icon {
+      width: 52px; height: 52px;
+      background: var(--lilac);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      flex-shrink: 0;
+    }
+    .event-series-header h3 { margin: 0; font-size: 1.4rem; }
+    .event-series-header p { margin: 0; font-size: 0.85rem; color: var(--mid); }
+
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.5rem;
+      margin-top: 1.5rem;
+    }
+    .photo-placeholder {
+      aspect-ratio: 1;
+      background: linear-gradient(135deg, var(--lilac-light), var(--lilac));
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      color: rgba(255,255,255,0.5);
+      transition: transform 0.2s ease, filter 0.2s ease;
+      cursor: pointer;
+    }
+    .photo-placeholder:hover { transform: scale(1.03); filter: brightness(1.08); }
+    .photo-placeholder:nth-child(2n) { background: linear-gradient(135deg, var(--lilac), var(--lilac-dark)); }
+    .photo-placeholder:nth-child(3n) { background: linear-gradient(135deg, var(--lilac-dark), #7a59a8); }
+
+    @media (max-width: 700px) {
+      .photo-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (max-width: 480px) {
+      .photo-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav scrolled">
+    <a href="index.html" class="nav-logo">FEMME <span>CREW</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Start</a></li>
+      <li><a href="gruenderinnen.html">Die Gründerinnen</a></li>
+      <li><a href="suedafrika.html">Südafrika</a></li>
+      <li><a href="vergangene-veranstaltungen.html">Events</a></li>
+      <li><a href="community.html">Community</a></li>
+      <li><a href="kontakt.html" class="btn-nav">Kontakt</a></li>
+    </ul>
+    <button class="hamburger" aria-label="Menü öffnen">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu">
+    <button class="mobile-menu-close">✕</button>
+    <a href="index.html">Start</a>
+    <a href="gruenderinnen.html">Die Gründerinnen</a>
+    <a href="suedafrika.html">Südafrika</a>
+    <a href="vergangene-veranstaltungen.html">Events</a>
+    <a href="community.html">Community</a>
+    <a href="kontakt.html">Kontakt</a>
+  </div>
+
+  <header class="page-header">
+    <div class="page-header-inner">
+      <p class="section-label">Was wir erlebt haben</p>
+      <h1>Vergangene<br /><em>Events</em></h1>
+      <p>Schau dir an, was wir bisher gemeinsam bewegt haben.</p>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="section-inner">
+
+      <!-- mind&music -->
+      <div class="event-series reveal">
+        <div class="event-series-header">
+          <div class="event-series-icon">🎵</div>
+          <div>
+            <h3>FEMME CREW mind&amp;music</h3>
+            <p>Musik trifft Empowerment — eine unvergessliche Veranstaltungsreihe</p>
+          </div>
+        </div>
+        <div class="past-events-list">
+          <div class="past-event-item">
+            <span class="past-event-name">FEMME CREW mind&amp;music — Köln</span>
+            <span class="past-event-tag">mind&amp;music</span>
+          </div>
+          <div class="past-event-item">
+            <span class="past-event-name">FEMME CREW mind&amp;music — Köln</span>
+            <span class="past-event-tag">mind&amp;music</span>
+          </div>
+          <div class="past-event-item">
+            <span class="past-event-name">FEMME CREW mind&amp;music — Köln</span>
+            <span class="past-event-tag">mind&amp;music</span>
+          </div>
+        </div>
+        <div class="photo-grid" style="margin-top: 1.5rem;">
+          <div class="photo-placeholder">🎶</div>
+          <div class="photo-placeholder">🎤</div>
+          <div class="photo-placeholder">🎵</div>
+          <div class="photo-placeholder">🎼</div>
+          <div class="photo-placeholder">🎶</div>
+          <div class="photo-placeholder">✨</div>
+          <div class="photo-placeholder">🤝</div>
+          <div class="photo-placeholder">💜</div>
+        </div>
+        <p style="font-size: 0.85rem; color: var(--mid); margin-top: 1rem; font-style: italic;">
+          * Fotos folgen sobald die eigenen Bilder eingebunden werden.
+        </p>
+      </div>
+
+      <!-- Finance -->
+      <div class="event-series reveal">
+        <div class="event-series-header">
+          <div class="event-series-icon" style="background: var(--black);">💰</div>
+          <div>
+            <h3>FEMME CREW Finance</h3>
+            <p>Finanzwissen für Frauen — weil finanzielle Unabhängigkeit emanzipiert</p>
+          </div>
+        </div>
+        <div class="past-events-list">
+          <div class="past-event-item">
+            <span class="past-event-name">FEMME CREW Finance — Alte Feuerwache Köln</span>
+            <span class="past-event-tag">Finance</span>
+          </div>
+          <div class="past-event-item">
+            <span class="past-event-name">FEMME CREW Finance — Alte Feuerwache Köln</span>
+            <span class="past-event-tag">Finance</span>
+          </div>
+          <div class="past-event-item">
+            <span class="past-event-name">FEMME CREW Finance — Alte Feuerwache Köln</span>
+            <span class="past-event-tag">Finance</span>
+          </div>
+        </div>
+        <div class="photo-grid" style="margin-top: 1.5rem;">
+          <div class="photo-placeholder">💡</div>
+          <div class="photo-placeholder">📊</div>
+          <div class="photo-placeholder">💬</div>
+          <div class="photo-placeholder">🙌</div>
+          <div class="photo-placeholder">✍️</div>
+          <div class="photo-placeholder">📈</div>
+          <div class="photo-placeholder">🤝</div>
+          <div class="photo-placeholder">💜</div>
+        </div>
+      </div>
+
+      <!-- Launch -->
+      <div class="event-series reveal">
+        <div class="event-series-header">
+          <div class="event-series-icon" style="background: linear-gradient(135deg, var(--lilac-dark), #5c3a96);">🚀</div>
+          <div>
+            <h3>FEMME CREW Launch</h3>
+            <p>Der Beginn von allem — unser Launch-Event, der alles ins Rollen brachte</p>
+          </div>
+        </div>
+        <div class="past-events-list">
+          <div class="past-event-item">
+            <span class="past-event-name">FEMME CREW Launch — Köln</span>
+            <span class="past-event-tag">Launch</span>
+          </div>
+          <div class="past-event-item">
+            <span class="past-event-name">FEMME CREW Launch — Köln</span>
+            <span class="past-event-tag">Launch</span>
+          </div>
+          <div class="past-event-item">
+            <span class="past-event-name">FEMME CREW Launch — Köln</span>
+            <span class="past-event-tag">Launch</span>
+          </div>
+        </div>
+        <div class="photo-grid" style="margin-top: 1.5rem;">
+          <div class="photo-placeholder">🎉</div>
+          <div class="photo-placeholder">🥂</div>
+          <div class="photo-placeholder">🌸</div>
+          <div class="photo-placeholder">🙌</div>
+          <div class="photo-placeholder">💜</div>
+          <div class="photo-placeholder">🤝</div>
+          <div class="photo-placeholder">✨</div>
+          <div class="photo-placeholder">🚀</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- NEXT EVENT CTA -->
+  <section class="section" style="background: var(--black);">
+    <div class="section-inner" style="text-align: center; max-width: 640px; margin: 0 auto;">
+      <p class="section-label reveal" style="color: var(--lilac);">Nächste Events</p>
+      <h2 class="reveal" style="color: var(--white);">Sei beim nächsten<br /><em style="color: var(--lilac);">Mal dabei!</em></h2>
+      <p class="reveal" style="color: rgba(255,255,255,0.6); margin-bottom: 2.5rem;">Unsere nächsten Veranstaltungen finden im Frühjahr und Herbst statt. Trag dir die Termine ein.</p>
+      <div class="reveal" style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+        <a href="index.html#events" class="btn btn-lilac">Kommende Events →</a>
+        <a href="kontakt.html" class="btn btn-outline" style="color: white; border-color: rgba(255,255,255,0.3);">Kontakt</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>FEMME CREW</h3>
+        <p>Female Empowerment &amp; Network — gegründet in Köln, mit Wirkung weit darüber hinaus.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Navigation</h4>
+        <a href="index.html">Start</a>
+        <a href="gruenderinnen.html">Die Gründerinnen</a>
+        <a href="suedafrika.html">Südafrika</a>
+        <a href="vergangene-veranstaltungen.html">Events</a>
+        <a href="community.html">Community</a>
+        <a href="kontakt.html">Kontakt</a>
+      </div>
+      <div class="footer-links">
+        <h4>Rechtliches</h4>
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+        <a href="agb.html">AGBs</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2024 FEMME CREW GbR — Köln</span>
+      <span>info@femmecrew.com</span>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

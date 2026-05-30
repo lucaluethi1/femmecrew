@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Community — FEMME CREW</title>
+  <meta name="description" content="Frauen unterstützen Frauen — unser Community-Board für Hilfe, Vernetzung und Austausch." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .board-categories {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      margin-bottom: 3rem;
+    }
+    .category-chip {
+      padding: 0.9rem 1.2rem;
+      border-radius: 12px;
+      border: 2px solid transparent;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      text-align: center;
+      background: var(--white);
+      border-color: rgba(0,0,0,0.1);
+    }
+    .category-chip:hover, .category-chip.active {
+      background: var(--lilac);
+      border-color: var(--lilac-dark);
+    }
+    .category-chip .icon { font-size: 1.5rem; margin-bottom: 0.3rem; }
+    .category-chip h4 { font-size: 0.85rem; margin: 0; }
+
+    .board-post-form {
+      background: var(--white);
+      border: 2px solid var(--lilac);
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 3rem;
+    }
+    .board-post-form h3 { margin-bottom: 1.5rem; font-size: 1.2rem; color: var(--black); }
+
+    .board-posts {
+      display: grid;
+      gap: 1rem;
+    }
+    .board-post {
+      background: var(--white);
+      border: 1px solid rgba(0,0,0,0.08);
+      border-radius: 12px;
+      padding: 1.5rem;
+      transition: box-shadow 0.2s ease;
+    }
+    .board-post:hover { box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+    .board-post-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 0.8rem;
+    }
+    .board-post-author {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--dark);
+    }
+    .avatar {
+      width: 32px; height: 32px;
+      background: linear-gradient(135deg, var(--lilac), var(--lilac-dark));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--white);
+    }
+    .board-post-tag {
+      font-size: 0.72rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 0.2rem 0.6rem;
+      border-radius: 100px;
+      background: var(--lilac-light);
+      color: var(--lilac-dark);
+    }
+    .board-post h4 { font-size: 1rem; margin-bottom: 0.5rem; color: var(--black); }
+    .board-post p { font-size: 0.9rem; }
+    .board-post-footer {
+      margin-top: 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(0,0,0,0.06);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.8rem;
+      color: var(--mid);
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav scrolled">
+    <a href="index.html" class="nav-logo">FEMME <span>CREW</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Start</a></li>
+      <li><a href="gruenderinnen.html">Die Gründerinnen</a></li>
+      <li><a href="suedafrika.html">Südafrika</a></li>
+      <li><a href="vergangene-veranstaltungen.html">Events</a></li>
+      <li><a href="community.html">Community</a></li>
+      <li><a href="kontakt.html" class="btn-nav">Kontakt</a></li>
+    </ul>
+    <button class="hamburger" aria-label="Menü öffnen">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu">
+    <button class="mobile-menu-close">✕</button>
+    <a href="index.html">Start</a>
+    <a href="gruenderinnen.html">Die Gründerinnen</a>
+    <a href="suedafrika.html">Südafrika</a>
+    <a href="vergangene-veranstaltungen.html">Events</a>
+    <a href="community.html">Community</a>
+    <a href="kontakt.html">Kontakt</a>
+  </div>
+
+  <header class="page-header">
+    <div class="page-header-inner">
+      <p class="section-label">Community-Board</p>
+      <h1>Du suchst —<br /><em>Du findest!</em></h1>
+      <p>Frauen unterstützen Frauen. Trag ein, was du suchst oder was du anbieten kannst.</p>
+    </div>
+  </header>
+
+  <section class="section" style="background: var(--light);">
+    <div class="section-inner">
+      <p class="section-label reveal">Kategorien</p>
+      <h2 class="section-title reveal" style="margin-bottom: 2rem;">Was suchst du?</h2>
+
+      <div class="board-categories">
+        <div class="category-chip reveal">
+          <div class="icon">🤝</div>
+          <h4>Vernetzung</h4>
+        </div>
+        <div class="category-chip reveal">
+          <div class="icon">💼</div>
+          <h4>Karriere &amp; Jobs</h4>
+        </div>
+        <div class="category-chip reveal">
+          <div class="icon">🎟️</div>
+          <h4>Event-Begleitung</h4>
+        </div>
+        <div class="category-chip reveal">
+          <div class="icon">💡</div>
+          <h4>Wissen &amp; Hilfe</h4>
+        </div>
+      </div>
+
+      <!-- FORM -->
+      <div class="board-post-form reveal">
+        <h3>✍️ Schreib einen Beitrag</h3>
+        <form id="board-form">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+            <div class="form-group">
+              <label>Dein Vorname</label>
+              <input type="text" placeholder="z.B. Laura" required />
+            </div>
+            <div class="form-group">
+              <label>Kategorie</label>
+              <select>
+                <option>Vernetzung</option>
+                <option>Karriere &amp; Jobs</option>
+                <option>Event-Begleitung</option>
+                <option>Wissen &amp; Hilfe</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Titel</label>
+            <input type="text" placeholder="Ich suche eine Mitfahrgelegenheit zum nächsten Event…" required />
+          </div>
+          <div class="form-group">
+            <label>Beschreibung</label>
+            <textarea placeholder="Beschreibe, was du suchst oder anbietest…" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Beitrag veröffentlichen</button>
+        </form>
+      </div>
+
+      <!-- EXAMPLE POSTS -->
+      <p class="section-label reveal">Aktuelle Beiträge</p>
+      <div class="board-posts">
+        <div class="board-post reveal">
+          <div class="board-post-meta">
+            <div class="board-post-author">
+              <div class="avatar">M</div>
+              Miriam K.
+            </div>
+            <span class="board-post-tag">Event-Begleitung</span>
+          </div>
+          <h4>Suche Begleitung für das April-Event!</h4>
+          <p>Ich komme aus Bonn und würde gerne zum nächsten FEMME CREW Event — habt ihr Lust, euch vorher zu treffen oder gemeinsam hinzufahren?</p>
+          <div class="board-post-footer">
+            <span>vor 2 Tagen</span>
+            <a href="mailto:info@femmecrew.com" style="color: var(--lilac-dark); font-weight: 600; font-size: 0.82rem;">Antworten →</a>
+          </div>
+        </div>
+
+        <div class="board-post reveal">
+          <div class="board-post-meta">
+            <div class="board-post-author">
+              <div class="avatar" style="background: linear-gradient(135deg, #a07cc8, #6a4fa3);">S</div>
+              Sarah B.
+            </div>
+            <span class="board-post-tag">Wissen &amp; Hilfe</span>
+          </div>
+          <h4>Ich biete Coaching für Bewerbungen an</h4>
+          <p>Als HR-Expertin helfe ich gerne bei Bewerbungsunterlagen, LinkedIn-Profil oder Gehaltsverhandlungen. Kostenlos für FEMME CREW Mitglieder!</p>
+          <div class="board-post-footer">
+            <span>vor 5 Tagen</span>
+            <a href="mailto:info@femmecrew.com" style="color: var(--lilac-dark); font-weight: 600; font-size: 0.82rem;">Antworten →</a>
+          </div>
+        </div>
+
+        <div class="board-post reveal">
+          <div class="board-post-meta">
+            <div class="board-post-author">
+              <div class="avatar" style="background: linear-gradient(135deg, var(--lilac), #7a59a8);">J</div>
+              Jana M.
+            </div>
+            <span class="board-post-tag">Vernetzung</span>
+          </div>
+          <h4>Suche andere Gründerinnen in Köln</h4>
+          <p>Ich gründe gerade mein erstes Startup und würde mich gerne mit anderen Gründerinnen austauschen. Wer hat Lust auf einen Kaffee?</p>
+          <div class="board-post-footer">
+            <span>vor 1 Woche</span>
+            <a href="mailto:info@femmecrew.com" style="color: var(--lilac-dark); font-weight: 600; font-size: 0.82rem;">Antworten →</a>
+          </div>
+        </div>
+      </div>
+
+      <p style="font-size: 0.85rem; color: var(--mid); margin-top: 2rem; font-style: italic; text-align: center;" class="reveal">
+        💡 Dies ist ein Community-Board im Aufbau. Beiträge werden über info@femmecrew.com koordiniert.
+      </p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>FEMME CREW</h3>
+        <p>Female Empowerment &amp; Network — gegründet in Köln, mit Wirkung weit darüber hinaus.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Navigation</h4>
+        <a href="index.html">Start</a>
+        <a href="gruenderinnen.html">Die Gründerinnen</a>
+        <a href="suedafrika.html">Südafrika</a>
+        <a href="vergangene-veranstaltungen.html">Events</a>
+        <a href="community.html">Community</a>
+        <a href="kontakt.html">Kontakt</a>
+      </div>
+      <div class="footer-links">
+        <h4>Rechtliches</h4>
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+        <a href="agb.html">AGBs</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2024 FEMME CREW GbR — Köln</span>
+      <span>info@femmecrew.com</span>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
