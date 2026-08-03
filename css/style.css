@@ -252,7 +252,7 @@ p { font-size: 1.05rem; color: var(--mid); line-height: 1.8; }
 
 /* ─── PHOTO BAND ─────────────────────────────────── */
 .photo-band { width: 100%; line-height: 0; }
-.photo-band img { width: 100%; height: min(60vh, 480px); object-fit: cover; display: block; }
+.photo-band img { width: 100%; height: min(60vh, 480px); object-fit: cover; object-position: center 25%; display: block; }
 
 /* ─── SAFE SPACE ─────────────────────────────────── */
 .safe-space { background: linear-gradient(160deg, var(--lilac-light), var(--lilac) 65%, var(--lilac-light)); }
@@ -382,16 +382,6 @@ p { font-size: 1.05rem; color: var(--mid); line-height: 1.8; }
   overflow: hidden;
   aspect-ratio: 4/5;
   background: linear-gradient(135deg, var(--lilac-dark), var(--lilac-deep));
-}
-.southafrica-visual-text {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-heading);
-  font-size: 6rem;
-  color: rgba(255,255,255,0.15);
 }
 .southafrica-quote {
   background: rgba(236,212,255,0.12);
