@@ -1,14 +1,15 @@
 :root {
-  --lilac: #c9b3e8;
-  --lilac-light: #ede6f7;
-  --lilac-dark: #9b78d4;
+  --lilac: #ECD4FF;
+  --lilac-light: #f6ecff;
+  --lilac-dark: #5454D2;
+  --lilac-deep: #2e2e7a;
   --black: #0f0f0f;
   --dark: #1c1c1c;
   --mid: #5a5a5a;
   --light: #f7f4fb;
   --white: #ffffff;
-  --font-heading: 'Playfair Display', Georgia, serif;
-  --font-body: 'Inter', system-ui, sans-serif;
+  --font-heading: 'Quicksand', system-ui, sans-serif;
+  --font-body: 'Quicksand', system-ui, sans-serif;
   --radius: 2px;
   --transition: 0.3s ease;
 }
@@ -313,6 +314,7 @@ p { font-size: 1.05rem; color: var(--mid); line-height: 1.8; }
   border-radius: 12px;
   overflow: hidden;
 }
+.founder-card-sticky { position: sticky; top: 6rem; }
 .founder-photo {
   aspect-ratio: 4/5;
   background: var(--lilac);
@@ -349,7 +351,7 @@ p { font-size: 1.05rem; color: var(--mid); line-height: 1.8; }
   border-radius: 12px;
   overflow: hidden;
   aspect-ratio: 4/5;
-  background: linear-gradient(135deg, var(--lilac-dark), #6a4fa3);
+  background: linear-gradient(135deg, var(--lilac-dark), var(--lilac-deep));
 }
 .southafrica-visual-text {
   position: absolute;
@@ -362,7 +364,7 @@ p { font-size: 1.05rem; color: var(--mid); line-height: 1.8; }
   color: rgba(255,255,255,0.15);
 }
 .southafrica-quote {
-  background: rgba(201,179,232,0.12);
+  background: rgba(236,212,255,0.12);
   border-left: 3px solid var(--lilac);
   border-radius: 0 8px 8px 0;
   padding: 1.5rem;
@@ -567,6 +569,15 @@ p { font-size: 1.05rem; color: var(--mid); line-height: 1.8; }
 .page-header h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); color: var(--black); }
 .page-header p { font-size: 1.1rem; max-width: 50ch; margin-top: 1rem; }
 
+/* ─── TIMELINE ───────────────────────────────────── */
+.timeline-wrap {
+  margin-top: 2rem;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+}
+.timeline-wrap img { width: 100%; height: auto; display: block; }
+
 /* ─── PROSE ──────────────────────────────────────── */
 .prose { max-width: 720px; }
 .prose h2 { margin: 2.5rem 0 1rem; color: var(--black); font-size: 1.5rem; }
@@ -590,6 +601,7 @@ p { font-size: 1.05rem; color: var(--mid); line-height: 1.8; }
   .hero-image { aspect-ratio: 4/3; }
   .mission-grid { grid-template-columns: 1fr; gap: 3rem; }
   .founders-grid { grid-template-columns: 1fr; }
+  .founder-card-sticky { position: static; }
   .southafrica-grid { grid-template-columns: 1fr; }
   .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
   .stats { grid-template-columns: 1fr; }
@@ -603,6 +615,8 @@ p { font-size: 1.05rem; color: var(--mid); line-height: 1.8; }
 @media (max-width: 600px) {
   .section { padding: 5rem 5%; }
   .nav-logo img { height: 48px; }
+  .timeline-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .timeline-wrap img { width: auto; max-width: none; height: 280px; }
   .footer-grid { grid-template-columns: 1fr; }
   .footer-bottom { flex-direction: column; text-align: center; }
   .hero-actions { flex-direction: column; }
