@@ -52,6 +52,23 @@ if (form) {
   });
 }
 
+// Newsletter form
+const newsletterForm = document.querySelector('.newsletter-form');
+if (newsletterForm) {
+  newsletterForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const btn = newsletterForm.querySelector('button[type=submit]');
+    const original = btn.textContent;
+    btn.textContent = '✓ Angemeldet!';
+    btn.disabled = true;
+    setTimeout(() => {
+      btn.textContent = original;
+      btn.disabled = false;
+      newsletterForm.reset();
+    }, 4000);
+  });
+}
+
 // Active nav link
 const currentPage = location.pathname.split('/').pop() || 'index.html';
 document.querySelectorAll('.nav-links a, .mobile-menu a').forEach(a => {
